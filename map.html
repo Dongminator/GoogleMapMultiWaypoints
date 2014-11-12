@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Waypoints in directions</title>
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+      #panel {
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        margin-left: -180px;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script src="GoogleMapMultiWaypoints.js"></script>
+    <script src="demo.js"></script>
+
+  </head>
+  <body>
+    <div id="map-canvas" style="float:left;width:70%;height:100%;"></div>
+    <div id="control_panel" style="float:right;width:30%;text-align:left;padding-top:20px">
+    <div style="margin:20px;border-width:2px;">
+    <b>Start:</b>
+    <select id="start">
+      <option value="Halifax, NS">Halifax, NS</option>
+      <option value="Boston, MA">Boston, MA</option>
+      <option value="New York, NY">New York, NY</option>
+      <option value="Miami, FL">Miami, FL</option>
+    </select>
+    <br>
+    <b>Waypoints:</b> <br>
+    <i>(Ctrl-Click for multiple selection)</i> <br>
+    <select multiple id="waypoints">
+      <option value="montreal, quebec">Montreal, QBC</option>
+      <option value="toronto, ont">Toronto, ONT</option>
+      <option value="chicago, il">Chicago</option>
+      <option value="winnipeg, mb">Winnipeg</option>
+      <option value="fargo, nd">Fargo</option>
+      <option value="calgary, ab">Calgary</option>
+      <option value="spokane, wa">Spokane</option>
+      <option value="Santa Monica, CA">Santa Monica, CA</option>
+      <option value="Santa Barbara CA">Santa Barbara, CA</option>
+      <option value="Santa Barbara CA">New York</option>
+      
+      <option value="Pittsburgh">Pittsburgh</option>
+      <option value="Philadelphia">Philadelphia</option>
+      <option value="Washington">Washington</option>
+      <option value="Atlanta">Atlanta</option>
+      <option value="Dallas">Dallas</option>
+      <option value="Austin">Austin</option>
+      <option value="Houston">Houston</option>
+      <option value="San Antonio">San Antonio</option>
+      <option value="Albuquerque">Albuquerque</option>
+      <option value="Oklahoma City">Oklahoma City</option>
+      <option value="Omaha">Omaha</option>
+      <option value="Minneapolis">Minneapolis</option>
+      <option value="Denver">Denver</option>
+      <option value="Las Vegas">Las Vegas</option>
+      <option value="San Diego">San Diego</option>
+      <option value="Los Angeles">Los Angeles</option>
+    </select>
+    <br>
+    <b>End:</b>
+    <select id="end">
+      <option value="Vancouver, BC">Vancouver, BC</option>
+      <option value="Seattle, WA">Seattle, WA</option>
+      <option value="San Francisco, CA">San Francisco, CA</option>
+      <option value="Los Angeles, CA">Los Angeles, CA</option>
+    </select>
+    <br>
+      <input type="submit" onclick="run();">
+    </div>
+    <div id="directions_panel" style="margin:20px;background-color:#FFEE77;"></div>
+    </div>
+  </body>
+</html>
